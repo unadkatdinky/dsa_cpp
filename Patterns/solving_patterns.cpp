@@ -37,6 +37,35 @@ void print4(int n) {
     }
 }
 
+void print5(int n) {
+    for(int i = 1; i <= n; i++) {
+        for(int j = i; j <= n - 1; j++) {
+            cout <<  " "; 
+        }
+        for(int j = 1; j <= 2*i - 1; j++) {
+            cout <<  "*"; 
+        }
+       
+        cout << endl;
+    }
+}
+
+void print6(int n) {
+    for(int i = 0; i < n; i++) {
+         for(int j = 0; j < i; j++) {
+            cout <<  " "; 
+        }
+      
+          for(int j = 0; j < (n-i)*2; j++) {
+            cout <<  "*"; 
+        }
+       
+       
+        cout << endl;
+    }
+}
+
+
 int main() {
     // qn 1
     //  ****
@@ -62,5 +91,9 @@ int main() {
     cout << endl; 
     cout << "Question 3:" << endl;
     print4(i);
+    cout << "Question 4:" << endl;
+    print5(5);
+    cout << "Question 5:" << endl;
+    print6(5);
     
 }
