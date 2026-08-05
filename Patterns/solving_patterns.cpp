@@ -65,6 +65,64 @@ void print6(int n) {
     }
 }
 
+int num = 1;
+void print7(int n) {
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j <= i; j++) {
+           cout << num << " ";
+           num++; 
+        }
+        cout << endl;
+    }
+}
+
+void print8(int n) {
+    for (int i = 0; i < n; i++) {
+
+        // Left numbers
+        for (int j = 0; j <= i; j++) {
+            cout << j + 1;
+        }
+
+        // Spaces
+        for (int j = 0; j < 2 * (n - i - 1); j++) {
+            cout << " ";
+        }
+
+        // Right numbers
+        for (int j = i; j >= 0; j--) {
+            cout << j + 1;
+        }
+
+        cout << endl;
+    }
+}
+
+char ascii = 'A'; 
+void print10(int n) {
+    for(int i = 0; i < n; i++) {
+        for (int j = 0; j <= i; j++) {
+            cout << ascii << " "; 
+            ascii = ascii + 1; 
+        }
+        cout << endl; 
+        ascii = 'A';
+    }
+}
+
+ 
+void print11(int n) {
+    for (int i = n; i >= 1; i--) {
+        char ascii = 'A';   // Reset to A for every row
+
+        for (int j = 1; j <= i; j++) {
+            cout << ascii << " ";
+            ascii++;
+        }
+
+        cout << endl;
+    }
+}
 
 int main() {
     // qn 1
@@ -95,5 +153,7 @@ int main() {
     print5(5);
     cout << "Question 5:" << endl;
     print6(5);
-    
+    print7(5);
+    print10(5);
+    print11(5);
 }
